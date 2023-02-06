@@ -19,10 +19,11 @@
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-
-
+\usepackage{geometry}
+\geometry{left=1in,right=1in,top=1in,bottom=1in}
+\usepackage{verbatim}
 \usepackage{graphicx}	
-
+\usepackage{amsmath}
 \usepackage[labelfont=bf]{caption}
 					
 \usepackage{float}
@@ -39,11 +40,11 @@
 \usepackage[pdfborder={0 0 0},
 			colorlinks=true, 
 			linkcolor=black,
-			citecolor=red,
+			citecolor=blue,
 			]{hyperref}
 			
-\usepackage{natbib}%numbers 				
-
+\usepackage[numbers]{natbib}%numbers 				
+\usepackage{textcase}
 \usepackage{pdfpages}
 
 \usepackage{color}
@@ -61,8 +62,8 @@
 
 \usepackage{scrlayer-scrpage} 							% Aufruf KOMA-Skript für Kopfzeilen
 
-\pagestyle{scrheadings}							% Definition der Eigenen Headerformatierung
-\clearscrheadfoot 								% alle Standard-Werte und Formatierungen raus
+%\pagestyle{scrheadings}							% Definition der Eigenen Headerformatierung
+\clearpairofpagestyles 								% alle Standard-Werte und Formatierungen raus
 %\automark[chapter]{section}						% Kapitel und Section als Inhalt der Variablen leftmark und rightmark
 \ohead{\pagemark}								% Seitenzahl auf äußerem Rand
 \ihead{\ifthispageodd{\leftmark}{\rightmark}} 	% Innere Überschrift mit Kapitel bei linker Seite und Section bei rechter Seite -> geht nur in Verbindung mit
@@ -72,7 +73,7 @@
 %----Fußzeile----------------------------------------------------------------------
 \setfootsepline{0.4pt} 							% Trennlinie Fußzeile und Textkörper
 \setkomafont{pagefoot}{\scshape}				% Schriftart in Fußfzeile, \scshape = Kapitelchen
-\ifoot{\footnotesize{John Doe}}
+\ifoot{\footnotesize{Sajeev Pillai}}
 \ofoot{\footnotesize{Master thesis}}		
 %----------------------------------------------------------------------------------
 
@@ -83,9 +84,9 @@
 }{
 {
 	(\textwidth ,0.4pt)
-	\footnotesize{John Doe} \hfill \footnotesize{Master thesis}} 
-	{\footnotesize{John Doe} \hfill \footnotesize{Master thesis}} 
-	{\footnotesize{John Doe} \hfill \footnotesize{Master thesis}}
+	\footnotesize{Sajeev Pillai} \hfill \footnotesize{Master thesis}} 
+	{\footnotesize{Sajeev Pillai} \hfill \footnotesize{Master thesis}} 
+	{\footnotesize{Sajeev Pillai} \hfill \footnotesize{Master thesis}}
 	(0pt ,0pt)
 }
 
@@ -106,6 +107,7 @@
 \setlength{\headsep}{10mm}						% Textabstand zur Kopfzeile
 \setlength{\footskip}{15mm}						% Abstand zur Fußzeile
 \setlength{\textheight}{235mm}					% Texthöhe
+
 %----------------------------------------------------------------------------------
 
 
@@ -140,7 +142,10 @@
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------
 %----------------DOKUMENT-BEGINN---------------------------------------------------
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+%\singlespacing  % for single spacing
+%\onehalfspacing % for one-and-a-half spacing
+%\doublespacing % for double spacing
+\numberwithin{equation}{section}
 \begin{document}
 
 	%\shorthandoff{"}						% Vermeidung von ungewollten Ligaturen/Avoid unwanted ligatures
@@ -178,13 +183,13 @@
 	\cleardoublepage
 	
 	%Sperrvermerk/Confidentiality clause (if any)
-	\thispagestyle{myPageStyle}
-	\include{confidentialityClause}
-	\cleardoublepage
+%	\thispagestyle{myPageStyle}
+%	\include{confidentialityClause}
+%	\cleardoublepage
 	
-	\include{nomenclature}		
-	\printnomenclature
-	\cleardoublepage	
+	%\include{nomenclature}		
+	%\printnomenclature
+	%\cleardoublepage	
 	
 	\include{glossary}	
 	\printglossaries	
@@ -237,13 +242,13 @@
 	
 	%Literaturliste/Literature references
 	\thispagestyle{myPageStyle}
-	\bibliographystyle{plainnat}
+	\bibliographystyle{unsrtnat}
 	%\bibliographystyle{abbrv}% changed abbrvdin to abbrv % DIN-Norm für Literaturdarstellung  plaindin 
 	%\bibliographystyle{abbrvnat}
 	\setcitestyle{authoryear, open={(}, close={)}}
 	
 	\renewcommand{\refname}{Literature references} % Remove for German thesis
-	\bibliography{literature}					% Pfad und Datei der Literaturdatenbank/Path and file name of literature references
+	\bibliography{literature}% Pfad und Datei der Literaturdatenbank/Path and file name of literature references
 	\cleardoublepage	
 	
 	%Anhänge/Appendices

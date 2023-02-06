@@ -1,13 +1,22 @@
 %----------Titelseite-------------------------------------------------------------
 
-\newgeometry{textheight=0.9\paperheight, textwidth=0.76\paperwidth, left=30mm, right=20mm}
+\newgeometry{height=0.9\paperheight, width=0.76\paperwidth, left=30mm, right=20mm}
 
 \begin{titlepage}	
 	%----THI+(x-company)-logo--------------------------------------------------------
-		\begin{figure}[!h]
-			\centering
-			\includegraphics[width={0.99\textwidth}]{images/thiRGB.jpg}	
-		\end{figure}																			
+\begin{figure}
+      \begin{minipage}[t]{0.4\textwidth}
+        \begin{flushleft}
+        \colorbox{gray}{\includegraphics[width=0.7\textwidth]{images/CES_LOGO_1C_White_normal.png}}
+        \end{flushleft}
+      \end{minipage}
+      \hfill
+      \begin{minipage}[t]{0.4\textwidth}
+        \begin{flushright}
+        \includegraphics[width=0.7\textwidth]{images/thiRGB.jpg}
+        \end{flushright}
+      \end{minipage}
+    \end{figure}
 	%------------------------------------------------------------------------------
 	
 	\begin{center}
@@ -19,27 +28,28 @@
 		\vspace{1cm}
 		
 		\huge\textbf{
-			Master Thesis}\\[2.5em]
-		\normalsize
+			Master Thesis}\\[2.5cm]
+		\large
 			in the study program International Automotive Engineering\\ Faculty of Electrical Engineering and Computer Science	\\ [7em]
 	
-		\Large\textbf{your thesis tile goes here}	 \\ 
+		\Large\textbf{Improvement of data acquisition methods for Automotive Environmental Qualifications by combining data analytics and
+compression methods}	 \\ 
 
 	\end{center}
 
-	\vfill
+	\vspace{3cm}
 	
 	
 	\begin{tabular}{lll}
-		First- und Last name &: & \textbf{John Doe}	\\ [3em]
+		First, Last name &: & \textbf{Sajeev Saju, Pillai}	\\ [3em]
 		
-		Registered on &:	& xx.yy.zzzz	\\ [1em] % issuing date
-		Submitted on &:	& xx.yy.zzzz	\\ [3em] %date of hand in
+		Registered on &:	& 03.01.2023	\\ [1em] % issuing date
+		Submitted on &:	& 31.01.2023	\\ [3em] %date of hand in
 		
-		First Examiner &: 	& Prof. Dr.-Ing. Max Mustermann	\\ [1em]
-		Second Examiner &: 	& Prof. Dr. Erika Mustermann	\\[3em]
+		First Examiner &: 	& Prof. Dr.-Ing. Armin Arnold	\\ [1em]
+		Second Examiner &: 	& Prof. Dr. Ing. Andreas Hagerer	\\[3em]
 		
-		Company advisor &:	& Mr. The Expert \\ %if applicable
+		Company advisor &:	& Dr. Ing. Gregor Niedermayer \\ %if applicable
 	\end{tabular}
 	
 \end{titlepage}
