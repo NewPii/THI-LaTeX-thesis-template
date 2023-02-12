@@ -25,7 +25,7 @@
 \usepackage{graphicx}	
 \usepackage{amsmath}
 \usepackage[labelfont=bf]{caption}
-					
+\usepackage{listings}			
 \usepackage{float}
 \usepackage{wrapfig}
 %\usepackage{subfigure}
@@ -121,7 +121,31 @@
 \makenomenclature
 %----------------------------------------------------------------------------------
 
-
+%--------Code Color------------------------------------------------
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\usepackage[demo]{rotating}
+\lstset{style=mystyle}
 
 \includeonly{	
 	titlepage,							
@@ -143,7 +167,7 @@
 %----------------DOKUMENT-BEGINN---------------------------------------------------
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------
 %\singlespacing  % for single spacing
-%\onehalfspacing % for one-and-a-half spacing
+\onehalfspacing % for one-and-a-half spacing
 %\doublespacing % for double spacing
 \numberwithin{equation}{section}
 \begin{document}

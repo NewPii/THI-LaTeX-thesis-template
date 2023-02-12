@@ -4,7 +4,7 @@
 
 This thesis studies different approaches to develop the algorithm to achieve data reduction. In this chapter different approaches to achieve data compression would be analysed. Also, QFD is a useful tool to define and analyse the requirements and consequently derive an appropriate solution to the problem in the form of an algorithm. The following sub-chapters discuss different approaches to achieve data reduction along with methods like pairwise comparison and weighted analysis used to determine the most optimal approach of all.
 
-\subsection{Mathematical Reduction}
+\subsection{Mathematical Reduction}\label{sec:Mathematical reduction}
 %\ref{datalog}
 As mentioned in previous chapters, the existing implementation is focused primarily on the down-sampling of data-stream. Thereafter, the average of each sample is calculated and then stored. While this is not a broken approach, there is a good amount of room for improvement here. While down-sampling with active monitoring for error free sample is a good approach, the existing method has a multi-step approach to achieving the down-sampling and then averaging the results. This approach would be computationally demanding than regular data log generation, as it undergoes a 3 step monitoring process before settling down on the pre-selected sampling frequency to down-sample the data-stream. This would require relatively more time also, naturally, than simple data-log generation. 
 

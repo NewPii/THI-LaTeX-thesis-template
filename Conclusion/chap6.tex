@@ -1,0 +1,28 @@
+\section{Concluding Discussions} 
+
+\subsection{Conclusive Summarization} 
+This thesis started with discussions about automotive systems and the testing of automotive components followed by a discussion about the importance of testing. This discussion shed a light on the outcome of testing and the data-files or logs associated with it. The storage and size of data-files were determined as a deterrent or Achilles heel for efficient handling, evaluation and preservation of test datas. 
+
+It was thus necessary to conduct a study about what these data-logs exactly are and what are the problems and necessary solutions associated with storing them. Thus, came data compression into picture. Further on, focus was placed on studying different data compression methods and determining which type of method suited best for the data-logs studied in the context of this thesis. After a comprehensive study, it was determined that from the two types of data-logs studied in this thesis, one of the data-logs using ".blf" could be compressed only by method of zipping. The maximum compression ratio achievable by this method depends on the zipping software or algorithm used. Studies on this topic, thus, didn't result in very promising results.
+
+However, the data-logs also consist of ".asc" files and the studies in direction of compression/reduction of file size of this datatype were relatively more successful. 5 different compression techniques could be derived for these file types. A QFD based study and weighted analysis helped in selecting the best possible theoretical solution for compressing data-files of ".asc" type. In practical implementation, a slight deviation from the theoretical solution was observed due to time and resource constraints. Although it was a deviation, the principle implementation was exactly the same and the logic behind it too with only the platform of implementation changing from proprietary tool to a more conventional tool called Python. Once the implementation started multiple trial and error rounds were conducted before finalising the desired algorithm implementation on these data-files.
+
+The algorithm was able to keep up with the requirements set at the beginning of this thesis. There were significant improvements in compressing the file sizes of the logs. At times, in ideal test run scenarios a compression of up-to 97\% could also be observed. The algorithm also achieved data evaluation goals set in the beginning. Thus, to conclude it can be stated that a successful study of problems, possible solutions and ultimately testing out the optimal solution for the target subject was conducted by means of this thesis.
+
+
+\newpage
+
+\subsection{Scope for future improvisations}
+
+There is never a dearth for improvements when it comes to innovation and technology. It's only with improvisations, the best out of a concept can be extracted and delivered to make the best possible product ever.  Thus, it is only appropriate to also discuss the same in context with this thesis. 
+
+\begin{itemize}
+    \item Parallel Processing :- The algorithm must be implemented with the same program design on to the test system based proprietary tool CANoe to achieve more functionality as parallel processing would provide the program easy access to various system variables and that greatly increases the degree of freedom while designing the algorithm.
+
+    \item Improved Data Evaluation :- A different approach to drift analysis could be implemented, possibly over the whole duration of the test run. This would give more idea of all the drifts involved in the DUTs. 
+
+    \item Advanced algorithm  :- The algorithm could be enhanced or altered to involve compression of ".blf" files as well. Studying the contents of ".blf" files individually and then integrating a compression algorithm for those could be a work in the right direction. Also, it is worth considering if the system explicitly ".blf" files and then a compression algorithm is run on to it and then ".asc" file is generated from this compressed ".blf" file in order to achieve overall compression.
+
+    \item Less customised approach :- A more generalised approach in terms of user inputs, test definitions and monitoring conditions could be tried and tested so that in future regardless of the test-system or test-design, the algorithm could be universally implemented, at-least with respect to test systems at CES. 
+    
+\end{itemize}
